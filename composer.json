@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/MTurbo",
+    "type": "magento-module",
+    "license": "Copyright-2010,-ARTIO-s.r.o.-All-rights-reserved.",
+    "homepage": "",
+    "description": "MAGENTO E-COMMERCE ACCELERATOR",
+    "authors": [
+    {
+        "name": "Michal Unzeitig",
+        "email": "michal.unzeitig@artio.net"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,32 @@
+
+############################################
+## M-Turbo Accelleration (www.artio.net)
+
+    # static rewrite - home page
+    RewriteCond %{HTTP_COOKIE} !artio_mturbo=.*
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteCond %{QUERY_STRING} !.+
+    RewriteCond $ROOTPATH/frontpage.html -f
+    RewriteRule .* $ROOTPATH/frontpage.html [L]
+    
+    # static rewrite - other pages
+    RewriteCond %{HTTP_COOKIE} !artio_mturbo=.*
+    RewriteCond %{REQUEST_URI} /(.*)/?$ [NC]
+    RewriteCond %{QUERY_STRING} !.+
+    RewriteCond $ROOTPATH/%1.html -f
+    RewriteRule .* $ROOTPATH/%1.html [L]
+    
+    # static rewrite - other pages
+    RewriteCond %{HTTP_COOKIE} !artio_mturbo=.*
+    RewriteCond %{REQUEST_URI} /(.*).html$ [NC]
+    RewriteCond %{QUERY_STRING} !.+
+    RewriteCond $ROOTPATH/%1.html -f
+    RewriteRule .* $ROOTPATH/%1.html [L]
+
+    # static rewrite - other pages
+    RewriteCond %{HTTP_COOKIE} !artio_mturbo=.*
+    RewriteCond %{REQUEST_URI} /(.*)$ [NC]
+    RewriteCond %{QUERY_STRING} !.+
+    RewriteCond $ROOTPATH/%1.html -f
+    RewriteRule .* $ROOTPATH/%1.html [L]
+    
